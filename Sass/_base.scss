@@ -1,0 +1,79 @@
+// Shared Variables - font colours
+$primary-font: #262626;
+
+// Shared variables - colours
+$color-primary: #ff6033;
+$color-secondary: #fff;
+$color-tertiary: #00bdbd;
+$color-bg-service: #70bfff;
+$color-bg-gallery: #ffe92f;
+$color-bg-blog: #b07cf7;
+
+// shared variables - layout
+$page-width: 120rem;
+$center-auto: 0 auto;
+$page-gutter: 0 3rem;
+
+// Shared variables - styling
+$shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.25);
+
+// Shared components
+@mixin center-text {
+  text-align: center;
+}
+// @include center-text;
+
+@mixin position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+// @include position(0, 0, 0, 0)
+
+%container-placeholder {
+  max-width: $page-width;
+  margin: $center-auto;
+  padding: $page-gutter;
+  height: 100%;
+  position: relative;
+}
+
+// helper classes
+%section-divider {
+  padding: 10rem 0;
+}
+
+@mixin grid-columns-auto($width) {
+  grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+}
+
+// media query hub
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm-phone {
+    @media only screen and (max-width: 26.8em) {
+      @content;
+    } // 430 / 16 = 26.8 (430px)
+  }
+  @if $breakpoint == md-phone {
+    @media only screen and (max-width: 37.4em) {
+      @content;
+    } // 599 / 16 = 37.4 (599px)
+  }
+  @if $breakpoint == lg-phone {
+    @media only screen and (max-width: 42.8em) {
+      @content;
+    } // 685 / 16 = 43.8 (685px)
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 48.7em) {
+      @content;
+    } // 780 / 16 = 48.7 (780px)
+  }
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 71.8em) {
+      @content;
+    } // 1150 / 16 = 71.8 (1200px)
+  }
+}

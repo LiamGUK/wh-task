@@ -1,0 +1,25 @@
+.footer {
+  background-color: $primary-font;
+  color: #fff;
+
+  &-container {
+    @extend %container-placeholder;
+  }
+
+  &-wrapper {
+    @extend %section-divider;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__copy p,
+    &__author p {
+      margin: 0;
+    }
+
+    & .footer-author {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+}

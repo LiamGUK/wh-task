@@ -1,0 +1,25 @@
+.about {
+  background-color: $color-tertiary;
+
+  &-container {
+    @extend %container-placeholder;
+  }
+
+  &-wrapper {
+    @extend %section-divider;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    @include grid-columns-auto(40rem);
+    color: $color-secondary;
+
+    &__img {
+      max-width: 50rem;
+    }
+
+    &__text {
+      max-width: 40rem;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.hero {
+  background-image: linear-gradient(
+      134deg,
+      rgba(237, 237, 237, 0.3),
+      transparent
+    ),
+    url(../img/header-bg-img.png);
+  background-size: auto 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 3rem;
+
+  &-container {
+    @extend %container-placeholder;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      margin-right: auto;
+      max-width: 7rem;
+    }
+
+    &__links ul {
+      display: flex;
+    }
+
+    &__links li {
+      display: inline-block;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      a:link::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 3px;
+        border-top: 3px solid $color-primary;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      & a:link,
+      & a:visited {
+        text-decoration: none;
+        font-weight: 700;
+        color: $primary-font;
+      }
+
+      & a:hover::before,
+      & a:active::before {
+        transform: scale(1);
+        opacity: 1;
+        border-top: 3px solid $color-primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+    }
+
+    &__btn--mobile {
+      border: none;
+      background: none;
+      cursor: pointer;
+      display: none;
+
+      & .mobile-open {
+        background-color: #000;
+        height: 2px;
+        width: 3rem;
+        display: inline-block;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          background-color: #000;
+          height: 2px;
+          width: 3rem;
+          position: absolute;
+          transition: transform 0.4s;
+        }
+
+        &::before {
+          transform: translateY(-1rem);
+        }
+
+        &::after {
+          transform: translateY(1rem);
+        }
+      }
+
+      & .mobile-close {
+        display: none;
+      }
+    }
+  }
+
+  &-text {
+    max-width: 38rem;
+    @include position(50%, unset, unset, 3.2%);
+    transform: translate(0.7%, -50%);
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90%;
+
+    &__img {
+      max-width: 2rem;
+    }
+  }
+}

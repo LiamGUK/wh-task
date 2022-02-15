@@ -1,0 +1,65 @@
+.services {
+  background-color: $color-bg-service;
+
+  &-container {
+    @extend %container-placeholder;
+  }
+
+  &-wrapper {
+    @extend %section-divider;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    @include grid-columns-auto(40rem);
+
+    &__blocks {
+      display: flex;
+      flex-direction: column;
+      width: 40rem;
+
+      &--info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: $shadow;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &__img {
+      position: relative;
+      max-width: 42rem;
+
+      & h2 {
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 3px rgba(0, 0, 0, 0.4);
+        @include position(50%, unset, unset, 50%);
+        transform: translate(-50%, -50%);
+        background-color: rgba(38, 38, 38, 0.32);
+        width: 26rem;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &-text {
+    flex: 1 1 60%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    display: inline-block;
+    padding: 0 2rem;
+  }
+
+  &-icon {
+    padding: 1.8rem 3rem;
+    border-left: 1px solid currentColor;
+    flex: 1;
+  }
+}
