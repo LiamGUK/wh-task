@@ -1,14 +1,18 @@
 # wh task files
-## task info
-To build a responsive landing page with different section features.
+<h2>task info</h2>
+<p>To build a responsive landing page with different section features.</p>
 
-##page build
--HTML
--CSS + SASS
--JS
+<h2>page build</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS compiled from SASS</li>
+  <li>Javascript</li>
+</ul>
 
-- sticky top menu bar (with logo) which activates on page scroll
-- smooth scrolling om internal links
-- Dynamic Gallery image pull using image generator
-- Dynamic blog page update with page pulls from API data request
-- Form validation on inputs
+<p>Page features include:</p>
+<ul>
+  <li>sticky top menu bar (with logo) which activates on page scroll</li>
+  <li>smooth scrolling om internal links</li>
+  <li>Dynamic Gallery image pull using image generator</li>
+  <li>Dynamic blog page update with page pulls from API data request</li>
+  <li>Form validation on inputs</li>
