@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/241d842c-d50f-4d22-84ba-c89f175a492b/deploy-status)](https://app.netlify.com/sites/wh-landing-page/deploys)
+
 # wh task files
 <h2>task info</h2>
 <p>To build a responsive landing page with different section features.</p>
